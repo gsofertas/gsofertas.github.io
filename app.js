@@ -30,14 +30,13 @@
       subtitulo: "Compare modelos por preço e tipo de uso para trabalhar ou jogar melhor.",
       iconeSvg:
         '<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="6"></rect><path d="M12 7v4"></path></svg>',
-      orcamentos: [80, 150, 300],
+      orcamentos: [50, 100, 150],
       usos: [
         { id: "jogos", label: "🎮 Jogos" },
         { id: "trabalho", label: "💼 Trabalho" },
-        { id: "portatil", label: "✈️ Portátil" },
         { id: "dia a dia", label: "🚶 Dia a dia" }
       ],
-      padraoOrcamento: 150,
+      padraoOrcamento: 100,
       padraoUso: "dia a dia"
     },
     teclados: {
@@ -390,6 +389,7 @@
     }
 
     if (grupoUso) {
+      grupoUso.className = config.usos.length === 3 ? "qf-grid-3" : "qf-grid-4";
       grupoUso.innerHTML = "";
       config.usos.forEach(function (usoObj) {
         const btn = document.createElement("button");
