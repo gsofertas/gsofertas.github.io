@@ -4,27 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Qual Comprar - Ofertas GS</title>
-  <meta name="description" content="Compare fones, mouses, teclados, headsets e cadeiras gamer por orçamento e tipo de uso." />
+  <meta name="description" content="Compare fones, mouses, teclados, headsets e cadeiras gamer por orçamento e tipo de uso com ofertas selecionadas da Amazon." />
   <link rel="stylesheet" href="./styles.css" />
   <script src="./app.js" defer></script>
 </head>
 <body data-page="home">
-  <main class="qf-shell">
-    <header class="qf-header">
-      <div class="qf-header-icon" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-          <path d="M3 6h18"></path>
-          <path d="M16 10a4 4 0 0 1-8 0"></path>
-        </svg>
+  <header class="site-navbar">
+    <div class="navbar-inner">
+      <div class="navbar-top-row">
+        <a class="brand-link" href="./index.html">
+          <span>Qual Comprar</span>
+          <span class="brand-badge">Ofertas GS</span>
+        </a>
+        <a class="nav-blog-btn" href="https://gs-ofertas.blogspot.com" target="_blank" rel="noopener">
+          Blog GS ↗
+        </a>
       </div>
-      <h1 class="qf-title">Qual Comprar - Ofertas GS</h1>
-      <p class="qf-subtitle">Escolha uma categoria abaixo, informe quanto quer gastar e veja os melhores produtos para o seu uso.</p>
-    </header>
+      <nav class="nav-pills-scroll" id="qf-nav-pills" aria-label="Categorias">
+        <a class="nav-pill" href="./comparador.html?cat=fones">🎧 Fones</a>
+        <a class="nav-pill" href="./comparador.html?cat=mouses">🖱️ Mouses</a>
+        <a class="nav-pill" href="./comparador.html?cat=teclados">⌨️ Teclados</a>
+        <a class="nav-pill" href="./comparador.html?cat=headsets">🎙️ Headsets</a>
+        <a class="nav-pill" href="./comparador.html?cat=cadeiras-gamer">🪑 Cadeiras Gamer</a>
+      </nav>
+    </div>
+  </header>
 
-    <div class="qf-content">
-      <div id="qf-home-status"></div>
-      <p class="home-intro">O que você está procurando hoje?</p>
+  <main class="page-container">
+    <section class="hero-banner">
+      <div class="hero-eyebrow">🔥 Ofertas selecionadas • Amazon Brasil</div>
+      <h1 class="hero-title">Encontre o produto certo pelo melhor preço, sem perder tempo.</h1>
+      <p class="hero-subtitle">Compare fones, headsets e periféricos por faixa de orçamento e uso real, com pontos fortes e limitações transparentes.</p>
+      <div class="hero-actions">
+        <a class="hero-btn-primary" href="#mais-procurados">🔥 Ver mais procurados</a>
+        <a class="hero-btn-secondary" href="#categorias">Escolher categoria</a>
+      </div>
+      <div class="hero-trust">
+        <span>✓ Curadoria direta e sincera</span>
+        <span>✓ Links oficiais Amazon</span>
+        <span>✓ Feito para decidir rápido no celular</span>
+      </div>
+    </section>
+
+    <div id="qf-home-status"></div>
+
+    <section id="mais-procurados" class="section-block">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">🔥 Mais procurados</h2>
+          <p class="section-desc">Os 3 destaques reais mais clicados para economizar agora.</p>
+        </div>
+        <a class="section-link" href="./comparador.html?cat=fones">Abrir comparador completo →</a>
+      </div>
+      <div id="qf-featured-grid" class="featured-grid"></div>
+    </section>
+
+    <section id="categorias" class="section-block">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">🎯 Compare por categoria</h2>
+          <p class="section-desc">Escolha o que você precisa hoje para filtrar por orçamento e uso.</p>
+        </div>
+      </div>
 
       <nav class="cat-grid" aria-label="Categorias de produtos">
         <a class="cat-card" href="./comparador.html?cat=fones" style="animation-delay: 0ms;">
@@ -33,7 +74,7 @@
               <span class="cat-emoji" aria-hidden="true">🎧</span>
               <span class="cat-count" data-cat-count="fones">...</span>
             </div>
-            <h2 class="cat-name">Fones</h2>
+            <h3 class="cat-name">Fones</h3>
             <p class="cat-desc">Intra-auriculares com fio e Bluetooth TWS para música, treino e trabalho.</p>
           </div>
           <span class="cat-cta">Comparar Fones →</span>
@@ -45,7 +86,7 @@
               <span class="cat-emoji" aria-hidden="true">🖱️</span>
               <span class="cat-count" data-cat-count="mouses">...</span>
             </div>
-            <h2 class="cat-name">Mouses</h2>
+            <h3 class="cat-name">Mouses</h3>
             <p class="cat-desc">Modelos silenciosos, portáteis e gamers com alta precisão.</p>
           </div>
           <span class="cat-cta">Comparar Mouses →</span>
@@ -57,7 +98,7 @@
               <span class="cat-emoji" aria-hidden="true">⌨️</span>
               <span class="cat-count" data-cat-count="teclados">...</span>
             </div>
-            <h2 class="cat-name">Teclados</h2>
+            <h3 class="cat-name">Teclados</h3>
             <p class="cat-desc">Teclados ABNT2 para trabalhar, mecânicos compactos e opções sem fio.</p>
           </div>
           <span class="cat-cta">Comparar Teclados →</span>
@@ -69,7 +110,7 @@
               <span class="cat-emoji" aria-hidden="true">🎙️</span>
               <span class="cat-count" data-cat-count="headsets">...</span>
             </div>
-            <h2 class="cat-name">Headsets</h2>
+            <h3 class="cat-name">Headsets</h3>
             <p class="cat-desc">Áudio imersivo e microfone nítido para jogos, chamadas e estudo.</p>
           </div>
           <span class="cat-cta">Comparar Headsets →</span>
@@ -81,17 +122,27 @@
               <span class="cat-emoji" aria-hidden="true">🪑</span>
               <span class="cat-count" data-cat-count="cadeiras-gamer">...</span>
             </div>
-            <h2 class="cat-name">Cadeiras Gamer</h2>
+            <h3 class="cat-name">Cadeiras Gamer</h3>
             <p class="cat-desc">Conforto e ergonomia para jogar ou trabalhar no home office.</p>
           </div>
           <span class="cat-cta">Comparar Cadeiras →</span>
         </a>
       </nav>
-    </div>
-
-    <footer class="qf-footer">
-      Como Associado da Amazon, ganho com compras qualificadas. Preços podem mudar; confira na loja.
-    </footer>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Qual Comprar - Ofertas GS</div>
+      <div class="footer-links">
+        <a class="footer-blog-btn" href="https://gs-ofertas.blogspot.com" target="_blank" rel="noopener">
+          Visitar blog GS Ofertas ↗
+        </a>
+      </div>
+      <p class="footer-disclaimer">
+        Como Associado da Amazon, ganho com compras qualificadas. Preços podem mudar; confira na loja.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

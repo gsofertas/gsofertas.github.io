@@ -8,35 +8,57 @@
   <script src="./app.js" defer></script>
 </head>
 <body data-page="comparador">
-  <main class="qf-shell">
-    <nav class="top-nav" aria-label="Navegação de categorias">
-      <a class="nav-back" href="./index.html">← Todas as categorias</a>
-      <div class="nav-pills" id="qf-nav-pills"></div>
-    </nav>
-
-    <header class="qf-header">
-      <div class="qf-header-icon" id="qf-header-icon" aria-hidden="true"></div>
-      <h1 class="qf-title" id="qf-header-title">Qual produto comprar?</h1>
-      <p class="qf-subtitle" id="qf-header-subtitle">Escolha seu orçamento e uso principal para ver as recomendações.</p>
-    </header>
-
-    <div class="qf-content">
-      <section class="qf-step" aria-label="Escolha de orçamento">
-        <span class="qf-step-label">1. Qual é o seu orçamento?</span>
-        <div class="qf-grid-3" id="qf-orcamento-grupo"></div>
-      </section>
-
-      <section class="qf-step" aria-label="Escolha de uso principal">
-        <span class="qf-step-label">2. Qual será o uso principal?</span>
-        <div class="qf-grid-4" id="qf-uso-grupo"></div>
-      </section>
-
-      <section id="qf-resultados-area" aria-live="polite"></section>
+  <header class="site-navbar">
+    <div class="navbar-inner">
+      <div class="navbar-top-row">
+        <a class="brand-link" href="./index.html">
+          <span>← Qual Comprar</span>
+          <span class="brand-badge">Ofertas GS</span>
+        </a>
+        <a class="nav-blog-btn" href="https://gs-ofertas.blogspot.com" target="_blank" rel="noopener">
+          Blog GS ↗
+        </a>
+      </div>
+      <nav class="nav-pills-scroll" id="qf-nav-pills" aria-label="Categorias"></nav>
     </div>
+  </header>
 
-    <footer class="qf-footer">
-      Como Associado da Amazon, ganho com compras qualificadas. Preços podem mudar; confira na loja.
-    </footer>
+  <main class="page-container">
+    <div class="qf-shell">
+      <header class="qf-header">
+        <div class="qf-header-icon" id="qf-header-icon" aria-hidden="true"></div>
+        <h1 class="qf-title" id="qf-header-title">Qual produto comprar?</h1>
+        <p class="qf-subtitle" id="qf-header-subtitle">Escolha seu orçamento e uso principal para ver as recomendações.</p>
+      </header>
+
+      <div class="qf-content">
+        <section class="qf-step" aria-label="Escolha de orçamento">
+          <span class="qf-step-label">1. Qual é o seu orçamento?</span>
+          <div class="qf-grid-3" id="qf-orcamento-grupo"></div>
+        </section>
+
+        <section class="qf-step" aria-label="Escolha de uso principal">
+          <span class="qf-step-label">2. Qual será o uso principal?</span>
+          <div class="qf-grid-4" id="qf-uso-grupo"></div>
+        </section>
+
+        <section id="qf-resultados-area" aria-live="polite"></section>
+      </div>
+    </div>
   </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">Qual Comprar - Ofertas GS</div>
+      <div class="footer-links">
+        <a class="footer-blog-btn" href="https://gs-ofertas.blogspot.com" target="_blank" rel="noopener">
+          Visitar blog GS Ofertas ↗
+        </a>
+      </div>
+      <p class="footer-disclaimer">
+        Como Associado da Amazon, ganho com compras qualificadas. Preços podem mudar; confira na loja.
+      </p>
+    </div>
+  </footer>
 </body>
 </html>

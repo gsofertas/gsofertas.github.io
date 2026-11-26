@@ -122,6 +122,106 @@
     return String(txt || "").trim().toLowerCase();
   }
 
+  function criarCardProduto(prod, opcoes) {
+    const opts = opcoes || {};
+    const index = opts.index || 0;
+    const destaque = Boolean(opts.destaque);
+    const mostrarCategoria = Boolean(opts.mostrarCategoria);
+
+    const card = document.createElement("article");
+    card.className = destaque ? "qf-card qf-card-destaque" : "qf-card";
+    card.style.animationDelay = index * 90 + "ms";
+
+    const imgWrap = document.createElement("div");
+    imgWrap.className = "qf-img-wrap";
+    const img = document.createElement("img");
+    img.src = prod.imagem || IMAGEM_FALLBACK;
+    img.alt = prod.nome;
+    img.loading = "lazy";
+    img.onerror = function () {
+      this.onerror = null;
+      this.src = IMAGEM_FALLBACK;
+    };
+    imgWrap.appendChild(img);
+
+    const body = document.createElement("div");
+    body.className = "qf-card-body";
+
+    if (destaque) {
+      const seloMelhor = document.createElement("div");
+      seloMelhor.className = "qf-best-badge";
+      seloMelhor.textContent = opts.textoDestaque || "★ Melhor escolha";
+      body.appendChild(seloMelhor);
+    }
+
+    const badges = document.createElement("div");
+    badges.className = "qf-badges";
+
+    if (mostrarCategoria) {
+      const catInfo = CATEGORIAS[prod.categoria];
+      const badgeCat = document.createElement("span");
+      badgeCat.className = "qf-badge-cat";
+      badgeCat.textContent = catInfo ? catInfo.emoji + " " + catInfo.label : prod.categoria;
+      badges.appendChild(badgeCat);
+    }
+
+    (prod.usos || []).forEach(function (u) {
+      const badgeUso = document.createElement("span");
+      badgeUso.className = "qf-badge-use";
+      badgeUso.textContent = u;
+      badges.appendChild(badgeUso);
+    });
+
+    const nome = document.createElement("h3");
+    nome.className = "qf-prod-name";
+    nome.textContent = prod.nome;
+
+    const priceRow = document.createElement("div");
+    priceRow.className = "qf-price-row";
+    const priceBig = document.createElement("span");
+    priceBig.className = "qf-price-big";
+    priceBig.textContent = formatarPreco(prod.preco);
+    const priceNote = document.createElement("span");
+    priceNote.className = "qf-price-note";
+    priceNote.textContent = "Confira o preço atualizado na Amazon";
+    priceRow.appendChild(priceBig);
+    priceRow.appendChild(priceNote);
+
+    const ul = document.createElement("ul");
+    ul.className = "qf-points";
+
+    (prod.vantagens || []).slice(0, 2).forEach(function (vantagem) {
+      const li = document.createElement("li");
+      li.className = "qf-pro";
+      li.textContent = "✓ Vantagem: " + vantagem;
+      ul.appendChild(li);
+    });
+
+    if (prod.limitacao) {
+      const liCon = document.createElement("li");
+      liCon.className = "qf-con";
+      liCon.textContent = "⚠ Limitação: " + prod.limitacao;
+      ul.appendChild(liCon);
+    }
+
+    const btnAmazon = document.createElement("a");
+    btnAmazon.className = "qf-amazon-btn";
+    btnAmazon.href = montarLinkAmazon(prod.asin);
+    btnAmazon.target = "_blank";
+    btnAmazon.rel = "nofollow noopener sponsored";
+    btnAmazon.textContent = "Ver na Amazon ↗";
+
+    body.appendChild(badges);
+    body.appendChild(nome);
+    body.appendChild(priceRow);
+    body.appendChild(ul);
+    body.appendChild(btnAmazon);
+
+    card.appendChild(imgWrap);
+    card.appendChild(body);
+    return card;
+  }
+
   async function carregarProdutos() {
     const resposta = await fetch("./produtos.json", { cache: "no-store" });
     if (!resposta.ok) {
@@ -144,8 +244,30 @@
     box.innerHTML =
       "<strong>Não foi possível carregar o arquivo produtos.json.</strong><br>" +
       "Se você abriu o arquivo HTML direto do computador (<code>file://</code>), o navegador bloqueia a leitura do JSON por segurança. " +
-      "Para testar, publique no <strong>GitHub Pages</strong> ou abra usando um servidor local (por exemplo, <code>npx serve</code> ou Live Server).";
+      "Para testar, publique no <strong>GitHub Pages</strong> ou abra usando um servidor local.";
     container.appendChild(box);
+  }
+
+  function selecionarMaisProcurados(produtos) {
+    const preferenciaAsins = ["B0DB52X2ZW", "B07Y2G7VX5", "B07JQKQ91F"];
+    const escolhidos = [];
+
+    preferenciaAsins.forEach(function (asin) {
+      const encontrado = produtos.find(function (p) {
+        return p.asin === asin;
+      });
+      if (encontrado) {
+        escolhidos.push(encontrado);
+      }
+    });
+
+    produtos.forEach(function (p) {
+      if (escolhidos.length < 3 && escolhidos.indexOf(p) === -1) {
+        escolhidos.push(p);
+      }
+    });
+
+    return escolhidos.slice(0, 3);
   }
 
   function iniciarHome(produtos) {
@@ -164,6 +286,22 @@
         el.textContent = qtd === 1 ? "1 opção" : qtd + " opções";
       }
     });
+
+    const gridMaisProcurados = document.getElementById("qf-featured-grid");
+    if (gridMaisProcurados) {
+      gridMaisProcurados.innerHTML = "";
+      const destaques = selecionarMaisProcurados(produtos);
+      destaques.forEach(function (prod, index) {
+        gridMaisProcurados.appendChild(
+          criarCardProduto(prod, {
+            index: index,
+            destaque: index === 0,
+            textoDestaque: "🔥 Mais procurado",
+            mostrarCategoria: true
+          })
+        );
+      });
+    }
   }
 
   function iniciarComparador(produtos) {
@@ -302,83 +440,14 @@
       listaCards.className = "qf-cards";
 
       recomendados.forEach(function (prod, index) {
-        const card = document.createElement("article");
-        card.className = index === 0 ? "qf-card qf-card-destaque" : "qf-card";
-        card.style.animationDelay = index * 90 + "ms";
-
-        const imgWrap = document.createElement("div");
-        imgWrap.className = "qf-img-wrap";
-        const img = document.createElement("img");
-        img.src = prod.imagem || IMAGEM_FALLBACK;
-        img.alt = prod.nome;
-        img.loading = "lazy";
-        img.onerror = function () {
-          this.onerror = null;
-          this.src = IMAGEM_FALLBACK;
-        };
-        imgWrap.appendChild(img);
-
-        const body = document.createElement("div");
-        body.className = "qf-card-body";
-
-        if (index === 0) {
-          const seloMelhor = document.createElement("div");
-          seloMelhor.className = "qf-best-badge";
-          seloMelhor.textContent = "★ Melhor escolha";
-          body.appendChild(seloMelhor);
-        }
-
-        const badges = document.createElement("div");
-        badges.className = "qf-badges";
-
-        const badgePreco = document.createElement("span");
-        badgePreco.className = "qf-badge-price";
-        badgePreco.textContent = formatarPreco(prod.preco);
-        badges.appendChild(badgePreco);
-
-        (prod.usos || []).forEach(function (u) {
-          const badgeUso = document.createElement("span");
-          badgeUso.className = "qf-badge-use";
-          badgeUso.textContent = u;
-          badges.appendChild(badgeUso);
-        });
-
-        const nome = document.createElement("h3");
-        nome.className = "qf-prod-name";
-        nome.textContent = prod.nome;
-
-        const ul = document.createElement("ul");
-        ul.className = "qf-points";
-
-        (prod.vantagens || []).slice(0, 2).forEach(function (vantagem) {
-          const li = document.createElement("li");
-          li.className = "qf-pro";
-          li.textContent = "✓ Vantagem: " + vantagem;
-          ul.appendChild(li);
-        });
-
-        if (prod.limitacao) {
-          const liCon = document.createElement("li");
-          liCon.className = "qf-con";
-          liCon.textContent = "⚠ Limitação: " + prod.limitacao;
-          ul.appendChild(liCon);
-        }
-
-        const btnAmazon = document.createElement("a");
-        btnAmazon.className = "qf-amazon-btn";
-        btnAmazon.href = montarLinkAmazon(prod.asin);
-        btnAmazon.target = "_blank";
-        btnAmazon.rel = "nofollow noopener sponsored";
-        btnAmazon.textContent = "Ver na Amazon";
-
-        body.appendChild(badges);
-        body.appendChild(nome);
-        body.appendChild(ul);
-        body.appendChild(btnAmazon);
-
-        card.appendChild(imgWrap);
-        card.appendChild(body);
-        listaCards.appendChild(card);
+        listaCards.appendChild(
+          criarCardProduto(prod, {
+            index: index,
+            destaque: index === 0,
+            textoDestaque: "★ Melhor escolha",
+            mostrarCategoria: false
+          })
+        );
       });
 
       areaResultados.appendChild(listaCards);
