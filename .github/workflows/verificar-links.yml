@@ -1,0 +1,23 @@
+name: Verificar links da Amazon diariamente
+on:
+  schedule:
+    # Roda todos os dias às 11:00 UTC (08:00 no horário de Brasília)
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+  issues: write
+jobs:
+  verificar-links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+      - name: Configurar Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Checar links dos produtos em produtos.json
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/verificar-links.mjs
