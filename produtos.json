@@ -236,5 +236,89 @@
     ],
     "limitacao": "Exige montagem cuidadosa e ocupa mais espaço no ambiente",
     "exemplo": true
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse com Fio Multilaser Classic MO300 USB 1200 DPI Preto",
+    "preco": 8.9,
+    "imagem": "https://m.media-amazon.com/images/I/415cNkqCWlL._AC_SX679_.jpg",
+    "asin": "B086J78G67",
+    "usos": ["trabalho", "dia a dia"],
+    "vantagens": [
+      "Sensor óptico de 1.200 DPI, plug and play sem instalar programa",
+      "Design compacto ambidestro com cabo de 1,2 m"
+    ],
+    "limitacao": "Modelo básico só com fio e 3 botões, sem ajuste de DPI",
+    "exemplo": false
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse com Fio USB Logitech M90 Ambidestro",
+    "preco": 28.88,
+    "imagem": "https://m.media-amazon.com/images/I/617w9nbQooL._AC_SX679_.jpg",
+    "asin": "B00VB4CXLI",
+    "usos": ["trabalho", "dia a dia"],
+    "vantagens": [
+      "Plug and play, sem precisar de software",
+      "Design ambidestro e sensor óptico de 1.000 DPI"
+    ],
+    "limitacao": "Só com fio, DPI fixo e 3 botões",
+    "exemplo": false
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse Gamer Redragon Predator M612-RGB Preto",
+    "preco": 79.98,
+    "imagem": "https://m.media-amazon.com/images/I/51AVGfhKbOL._AC_SX679_.jpg",
+    "asin": "B08T68T1T6",
+    "usos": ["jogos"],
+    "vantagens": [
+      "Sensor Pixart com até 8.000 DPI e resposta de 1.000 Hz",
+      "9 botões programáveis e iluminação RGB"
+    ],
+    "limitacao": "Só com fio, e as macros exigem o software da Redragon",
+    "exemplo": false
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse Gamer Logitech G203 LIGHTSYNC RGB 8.000 DPI Preto",
+    "preco": 80.9,
+    "imagem": "https://m.media-amazon.com/images/I/61oE1NouXuL._AC_SX679_.jpg",
+    "asin": "B087CT8PWY",
+    "usos": ["jogos", "dia a dia"],
+    "vantagens": [
+      "Até 8.000 DPI com 5 perfis de sensibilidade",
+      "6 botões programáveis e iluminação RGB"
+    ],
+    "limitacao": "Só com fio, e a personalização completa exige o Logitech G HUB",
+    "exemplo": false
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse Gamer Havit MS966SE Tri-Mode Sem Fio e Com Fio RGB 10.000 DPI",
+    "preco": 109.99,
+    "imagem": "https://m.media-amazon.com/images/I/519+tQua0IL._AC_SL1500_.jpg",
+    "asin": "B0FM8W4YXP",
+    "usos": ["jogos", "trabalho", "dia a dia"],
+    "vantagens": [
+      "3 conexões: com fio, Bluetooth e sem fio 2,4 GHz, recarregável",
+      "DPI ajustável de 800 a 10.000, 7 botões e RGB"
+    ],
+    "limitacao": "Formato para destros, e sem fio depende da bateria",
+    "exemplo": false
+  },
+  {
+    "categoria": "mouses",
+    "nome": "Mouse Gamer Sem Fio Redragon Storm Pro Preto",
+    "preco": 121.03,
+    "imagem": "https://m.media-amazon.com/images/I/51c5Y+I7rmL._AC_SY879_.jpg",
+    "asin": "B09FQ27R9C",
+    "usos": ["jogos"],
+    "vantagens": [
+      "Sensor Pixart com até 16.000 DPI e botões programáveis",
+      "Sem fio, estrutura leve honeycomb e RGB"
+    ],
+    "limitacao": "Carcaça perfurada, pouco discreta pro escritório",
+    "exemplo": false
   }
 ]
