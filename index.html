@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qual Comprar - Ofertas GS</title>
+  <meta name="description" content="Compare fones, mouses, teclados, headsets e cadeiras gamer por orçamento e tipo de uso." />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./app.js" defer></script>
+</head>
+<body data-page="home">
+  <main class="qf-shell">
+    <header class="qf-header">
+      <div class="qf-header-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+          <path d="M3 6h18"></path>
+          <path d="M16 10a4 4 0 0 1-8 0"></path>
+        </svg>
+      </div>
+      <h1 class="qf-title">Qual Comprar - Ofertas GS</h1>
+      <p class="qf-subtitle">Escolha uma categoria abaixo, informe quanto quer gastar e veja os melhores produtos para o seu uso.</p>
+    </header>
+
+    <div class="qf-content">
+      <div id="qf-home-status"></div>
+      <p class="home-intro">O que você está procurando hoje?</p>
+
+      <nav class="cat-grid" aria-label="Categorias de produtos">
+        <a class="cat-card" href="./comparador.html?cat=fones" style="animation-delay: 0ms;">
+          <div>
+            <div class="cat-card-top">
+              <span class="cat-emoji" aria-hidden="true">🎧</span>
+              <span class="cat-count" data-cat-count="fones">...</span>
+            </div>
+            <h2 class="cat-name">Fones</h2>
+            <p class="cat-desc">Intra-auriculares com fio e Bluetooth TWS para música, treino e trabalho.</p>
+          </div>
+          <span class="cat-cta">Comparar Fones →</span>
+        </a>
+
+        <a class="cat-card" href="./comparador.html?cat=mouses" style="animation-delay: 70ms;">
+          <div>
+            <div class="cat-card-top">
+              <span class="cat-emoji" aria-hidden="true">🖱️</span>
+              <span class="cat-count" data-cat-count="mouses">...</span>
+            </div>
+            <h2 class="cat-name">Mouses</h2>
+            <p class="cat-desc">Modelos silenciosos, portáteis e gamers com alta precisão.</p>
+          </div>
+          <span class="cat-cta">Comparar Mouses →</span>
+        </a>
+
+        <a class="cat-card" href="./comparador.html?cat=teclados" style="animation-delay: 140ms;">
+          <div>
+            <div class="cat-card-top">
+              <span class="cat-emoji" aria-hidden="true">⌨️</span>
+              <span class="cat-count" data-cat-count="teclados">...</span>
+            </div>
+            <h2 class="cat-name">Teclados</h2>
+            <p class="cat-desc">Teclados ABNT2 para trabalhar, mecânicos compactos e opções sem fio.</p>
+          </div>
+          <span class="cat-cta">Comparar Teclados →</span>
+        </a>
+
+        <a class="cat-card" href="./comparador.html?cat=headsets" style="animation-delay: 210ms;">
+          <div>
+            <div class="cat-card-top">
+              <span class="cat-emoji" aria-hidden="true">🎙️</span>
+              <span class="cat-count" data-cat-count="headsets">...</span>
+            </div>
+            <h2 class="cat-name">Headsets</h2>
+            <p class="cat-desc">Áudio imersivo e microfone nítido para jogos, chamadas e estudo.</p>
+          </div>
+          <span class="cat-cta">Comparar Headsets →</span>
+        </a>
+
+        <a class="cat-card" href="./comparador.html?cat=cadeiras-gamer" style="animation-delay: 280ms;">
+          <div>
+            <div class="cat-card-top">
+              <span class="cat-emoji" aria-hidden="true">🪑</span>
+              <span class="cat-count" data-cat-count="cadeiras-gamer">...</span>
+            </div>
+            <h2 class="cat-name">Cadeiras Gamer</h2>
+            <p class="cat-desc">Conforto e ergonomia para jogar ou trabalhar no home office.</p>
+          </div>
+          <span class="cat-cta">Comparar Cadeiras →</span>
+        </a>
+      </nav>
+    </div>
+
+    <footer class="qf-footer">
+      Como Associado da Amazon, ganho com compras qualificadas. Preços podem mudar; confira na loja.
+    </footer>
+  </main>
+</body>
+</html>

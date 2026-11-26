@@ -1,0 +1,240 @@
+[
+  {
+    "categoria": "fones",
+    "nome": "JBL, Fone de Ouvido in Ear, C50HI - Preto",
+    "preco": 49.9,
+    "imagem": "https://m.media-amazon.com/images/I/51ijOG7u83L._AC_SX425_.jpg",
+    "asin": "B07JQKQ91F",
+    "usos": ["trabalho", "dia a dia", "academia"],
+    "vantagens": [
+      "Drivers de 8,6 mm e microfone integrado com controle remoto de 1 botão",
+      "Três tamanhos de ponteiras (P, M e G) e cabo de 1,2 m com plugue P2 3,5 mm"
+    ],
+    "limitacao": "É um modelo apenas com fio, e só funciona em aparelhos com entrada P2 de 3,5 mm",
+    "exemplo": false
+  },
+  {
+    "categoria": "fones",
+    "nome": "PHILIPS, Fone de Ouvido com Microfone, TAUE101BK/00, intra-auricular, Preto",
+    "preco": 39.9,
+    "imagem": "https://m.media-amazon.com/images/I/51+W7A115SL._AC_SX679_.jpg",
+    "asin": "B084S6BCJN",
+    "usos": ["trabalho", "dia a dia"],
+    "vantagens": [
+      "Drivers de 14,2 mm com ímã de neodímio e microfone com botão de chamada no fio",
+      "Cabo de 1,2 m com alívio de tensão emborrachado"
+    ],
+    "limitacao": "É um fone com fio e sistema acústico aberto, então isola pouco o ruído externo",
+    "exemplo": false
+  },
+  {
+    "categoria": "fones",
+    "nome": "Xiaomi Redmi Buds 6 Play",
+    "preco": 99.9,
+    "imagem": "https://m.media-amazon.com/images/I/51DVGGv77KL._AC_SL1500_.jpg",
+    "asin": "B0DB52X2ZW",
+    "usos": ["academia", "jogos", "dia a dia"],
+    "vantagens": [
+      "Bluetooth 5.4 com baixa latência para jogos, vídeo e chamadas",
+      "Até 36 horas de bateria com o estojo (7,5 h nos fones), recarga USB-C e resistência IPX4 a respingos e suor"
+    ],
+    "limitacao": "Não tem cancelamento de ruído ativo (ANC) para música; a redução de ruído anunciada (AI ENC) é para chamadas",
+    "exemplo": false
+  },
+  {
+    "categoria": "fones",
+    "nome": "PHILIPS, Fone de Ouvido Sem Fio TWS, TAT1109BK/00, Bluetooth, Preto",
+    "preco": 95.9,
+    "imagem": "https://m.media-amazon.com/images/I/519bjoeFBTL._AC_SX425_.jpg",
+    "asin": "B0DVMQVVDY",
+    "usos": ["trabalho", "academia", "dia a dia"],
+    "vantagens": [
+      "Até 24 horas de uso total (6 h nos fones + 18 h no estojo) e carga rápida de 15 minutos para 1 hora extra",
+      "Resistência IPX4 a suor e respingos, com microfone e redução de ruído para chamadas"
+    ],
+    "limitacao": "Os fones sozinhos duram até 6 horas, e o anúncio não menciona cancelamento de ruído ativo (ANC)",
+    "exemplo": false
+  },
+  {
+    "categoria": "fones",
+    "nome": "Philips Fone de Ouvido True Wireless Preto - TAT1139BK",
+    "preco": 149.9,
+    "imagem": "https://m.media-amazon.com/images/I/41zUAqrxZPL._AC_SX425_.jpg",
+    "asin": "B0FS268X4B",
+    "usos": ["academia", "trabalho", "dia a dia"],
+    "vantagens": [
+      "Bluetooth 5.4 com alcance de até 10 m, drivers de 13 mm e microfone com redução de ruído",
+      "Até 26 horas de reprodução (6 h nos fones + 20 h no estojo), carga rápida de 15 minutos para 1 hora extra e resistência IPX4"
+    ],
+    "limitacao": "Os fones sozinhos duram até 6 horas, e o anúncio não menciona cancelamento de ruído ativo (ANC)",
+    "exemplo": false
+  },
+  {
+    "categoria": "headsets",
+    "nome": "Headset Gamer com Microfone Havit H2002d, 53 mm, conector 3,5 mm, Preta/roxa",
+    "preco": 149.9,
+    "imagem": "https://m.media-amazon.com/images/I/71yVhRlcJdL._AC_SX679_.jpg",
+    "asin": "B07Y2G7VX5",
+    "usos": ["jogos", "trabalho"],
+    "vantagens": [
+      "Drivers de 53 mm e microfone destacável",
+      "Conector 3,5 mm compatível com Xbox One e PS4, com headband ajustável e cabo de 1,7 m"
+    ],
+    "limitacao": "É um headset com fio e formato over-ear, pouco prático para transportar no dia a dia",
+    "exemplo": false
+  },
+  {
+    "categoria": "headsets",
+    "nome": "[EXEMPLO] Headset USB com Som Estéreo e Microfone Flip-to-Mute",
+    "preco": 239.9,
+    "imagem": "https://placehold.co/400x400/1e2430/f97316?text=HEADSET+EXEMPLO+1",
+    "asin": "EXEMPLOH01",
+    "usos": ["trabalho", "jogos", "dia a dia"],
+    "vantagens": [
+      "Conexão USB plug-and-play com áudio limpo em reuniões e chamadas",
+      "Espumas respiráveis confortáveis para jornadas longas"
+    ],
+    "limitacao": "Não possui conexão Bluetooth para usar sem fio no celular",
+    "exemplo": true
+  },
+  {
+    "categoria": "headsets",
+    "nome": "[EXEMPLO] Headset Wireless Baixa Latência Multiplataforma",
+    "preco": 379.9,
+    "imagem": "https://placehold.co/400x400/1e2430/a855f7?text=HEADSET+EXEMPLO+2",
+    "asin": "EXEMPLOH02",
+    "usos": ["jogos", "musica", "dia a dia"],
+    "vantagens": [
+      "Conexão sem fio via dongle USB de baixa latência e Bluetooth",
+      "Bateria para até 30 horas de uso contínuo com recarga rápida"
+    ],
+    "limitacao": "Microfone interno não tem o mesmo alcance de modelos com haste dedicada",
+    "exemplo": true
+  },
+  {
+    "categoria": "mouses",
+    "nome": "[EXEMPLO] Mouse Sem Fio Compacto Silencioso",
+    "preco": 74.9,
+    "imagem": "https://placehold.co/400x400/1e2430/38bdf8?text=MOUSE+EXEMPLO+1",
+    "asin": "EXEMPLOM01",
+    "usos": ["trabalho", "portatil", "dia a dia"],
+    "vantagens": [
+      "Cliques silenciosos ideais para escritório, faculdade e reuniões",
+      "Leve e compacto para caber fácil na mochila do notebook"
+    ],
+    "limitacao": "Sensor básico pensado para produtividade, não para jogos competitivos",
+    "exemplo": true
+  },
+  {
+    "categoria": "mouses",
+    "nome": "[EXEMPLO] Mouse Gamer Leve 8000 DPI com Cabo Paracord",
+    "preco": 139.9,
+    "imagem": "https://placehold.co/400x400/1e2430/f97316?text=MOUSE+EXEMPLO+2",
+    "asin": "EXEMPLOM02",
+    "usos": ["jogos", "dia a dia"],
+    "vantagens": [
+      "Sensor preciso com ajuste de DPI e botões laterais programáveis",
+      "Pegada confortável e cabo flexível com baixo arrasto"
+    ],
+    "limitacao": "Funciona apenas com fio via porta USB",
+    "exemplo": true
+  },
+  {
+    "categoria": "mouses",
+    "nome": "[EXEMPLO] Mouse Sem Fio Ergonômico Dual Mode (USB + Bluetooth)",
+    "preco": 279.9,
+    "imagem": "https://placehold.co/400x400/1e2430/34d399?text=MOUSE+EXEMPLO+3",
+    "asin": "EXEMPLOM03",
+    "usos": ["trabalho", "jogos", "portatil", "dia a dia"],
+    "vantagens": [
+      "Alterna entre 2 dispositivos via Bluetooth ou receptor USB",
+      "Bateria recarregável via USB-C com autonomia de várias semanas"
+    ],
+    "limitacao": "Formato pensado para destros, menos indicado para canhotos",
+    "exemplo": true
+  },
+  {
+    "categoria": "teclados",
+    "nome": "[EXEMPLO] Teclado Slim ABNT2 Silencioso com Fio",
+    "preco": 89.9,
+    "imagem": "https://placehold.co/400x400/1e2430/38bdf8?text=TECLADO+EXEMPLO+1",
+    "asin": "EXEMPLOT01",
+    "usos": ["trabalho", "silencioso", "dia a dia"],
+    "vantagens": [
+      "Layout ABNT2 completo com Ç e teclado numérico",
+      "Teclas baixas e macias que fazem pouco barulho ao digitar"
+    ],
+    "limitacao": "Não possui iluminação nas teclas para uso no escuro",
+    "exemplo": true
+  },
+  {
+    "categoria": "teclados",
+    "nome": "[EXEMPLO] Teclado Mecânico Compacto 65% Switch Red",
+    "preco": 189.9,
+    "imagem": "https://placehold.co/400x400/1e2430/f97316?text=TECLADO+EXEMPLO+2",
+    "asin": "EXEMPLOT02",
+    "usos": ["jogos", "dia a dia"],
+    "vantagens": [
+      "Switches lineares responsivos com sistema anti-ghosting completo",
+      "Ocupa pouco espaço na mesa deixando mais área livre para o mouse"
+    ],
+    "limitacao": "Sem teclado numérico dedicado para planilhas frequentes",
+    "exemplo": true
+  },
+  {
+    "categoria": "teclados",
+    "nome": "[EXEMPLO] Teclado Sem Fio Multi-dispositivo ABNT2",
+    "preco": 329.9,
+    "imagem": "https://placehold.co/400x400/1e2430/34d399?text=TECLADO+EXEMPLO+3",
+    "asin": "EXEMPLOT03",
+    "usos": ["trabalho", "silencioso", "dia a dia"],
+    "vantagens": [
+      "Conecta até 3 aparelhos por Bluetooth ou receptor sem fio",
+      "Construção estável, digitação silenciosa e longa duração de bateria"
+    ],
+    "limitacao": "Tempo de resposta focado em produtividade, não em jogos competitivos",
+    "exemplo": true
+  },
+  {
+    "categoria": "cadeiras-gamer",
+    "nome": "[EXEMPLO] Cadeira Gamer Compacta com Apoio Fixo",
+    "preco": 589.9,
+    "imagem": "https://placehold.co/400x400/1e2430/38bdf8?text=CADEIRA+EXEMPLO+1",
+    "asin": "EXEMPLOC01",
+    "usos": ["jogos", "compacta"],
+    "vantagens": [
+      "Tamanho enxuto que cabe bem em quartos e escritórios menores",
+      "Pistão com regulagem de altura e revestimento fácil de limpar"
+    ],
+    "limitacao": "Apoios de braço fixos e inclinação básica",
+    "exemplo": true
+  },
+  {
+    "categoria": "cadeiras-gamer",
+    "nome": "[EXEMPLO] Cadeira Gamer Reclinável 150° com Almofadas",
+    "preco": 869.9,
+    "imagem": "https://placehold.co/400x400/1e2430/f97316?text=CADEIRA+EXEMPLO+2",
+    "asin": "EXEMPLOC02",
+    "usos": ["jogos", "trabalho", "conforto"],
+    "vantagens": [
+      "Encosto reclinável com almofadas de lombar e pescoço inclusas",
+      "Base giratória reforçada e rodízios que não riscam o piso"
+    ],
+    "limitacao": "Revestimento sintético pode esquentar em dias muito quentes",
+    "exemplo": true
+  },
+  {
+    "categoria": "cadeiras-gamer",
+    "nome": "[EXEMPLO] Cadeira Gamer em Tecido Respirável com Braços 3D",
+    "preco": 1249.9,
+    "imagem": "https://placehold.co/400x400/1e2430/34d399?text=CADEIRA+EXEMPLO+3",
+    "asin": "EXEMPLOC03",
+    "usos": ["trabalho", "conforto", "jogos"],
+    "vantagens": [
+      "Tecido respirável muito mais fresco para longas horas de uso",
+      "Apoios de braço ajustáveis e espuma de alta densidade no assento"
+    ],
+    "limitacao": "Exige montagem cuidadosa e ocupa mais espaço no ambiente",
+    "exemplo": true
+  }
+]
