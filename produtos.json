@@ -112,48 +112,6 @@
     "exemplo": true
   },
   {
-    "categoria": "mouses",
-    "nome": "[EXEMPLO] Mouse Sem Fio Compacto Silencioso",
-    "preco": 74.9,
-    "imagem": "https://placehold.co/400x400/1e2430/38bdf8?text=MOUSE+EXEMPLO+1",
-    "asin": "EXEMPLOM01",
-    "usos": ["trabalho", "portatil", "dia a dia"],
-    "vantagens": [
-      "Cliques silenciosos ideais para escritório, faculdade e reuniões",
-      "Leve e compacto para caber fácil na mochila do notebook"
-    ],
-    "limitacao": "Sensor básico pensado para produtividade, não para jogos competitivos",
-    "exemplo": true
-  },
-  {
-    "categoria": "mouses",
-    "nome": "[EXEMPLO] Mouse Gamer Leve 8000 DPI com Cabo Paracord",
-    "preco": 139.9,
-    "imagem": "https://placehold.co/400x400/1e2430/f97316?text=MOUSE+EXEMPLO+2",
-    "asin": "EXEMPLOM02",
-    "usos": ["jogos", "dia a dia"],
-    "vantagens": [
-      "Sensor preciso com ajuste de DPI e botões laterais programáveis",
-      "Pegada confortável e cabo flexível com baixo arrasto"
-    ],
-    "limitacao": "Funciona apenas com fio via porta USB",
-    "exemplo": true
-  },
-  {
-    "categoria": "mouses",
-    "nome": "[EXEMPLO] Mouse Sem Fio Ergonômico Dual Mode (USB + Bluetooth)",
-    "preco": 279.9,
-    "imagem": "https://placehold.co/400x400/1e2430/34d399?text=MOUSE+EXEMPLO+3",
-    "asin": "EXEMPLOM03",
-    "usos": ["trabalho", "jogos", "portatil", "dia a dia"],
-    "vantagens": [
-      "Alterna entre 2 dispositivos via Bluetooth ou receptor USB",
-      "Bateria recarregável via USB-C com autonomia de várias semanas"
-    ],
-    "limitacao": "Formato pensado para destros, menos indicado para canhotos",
-    "exemplo": true
-  },
-  {
     "categoria": "teclados",
     "nome": "[EXEMPLO] Teclado Slim ABNT2 Silencioso com Fio",
     "preco": 89.9,
